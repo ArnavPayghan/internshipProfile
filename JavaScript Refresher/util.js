@@ -1,0 +1,1 @@
+export let api_key = "randomApiKey"; // export allows to use in different files as well.
