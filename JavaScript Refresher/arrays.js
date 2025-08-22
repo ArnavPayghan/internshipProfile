@@ -16,4 +16,11 @@ const index = hobbies.findIndex((item) => {
 // const index = hobbies.findIndex((item) => item === "Gaming"); --- Shorter Version.
 console.log(index);
 
+// .map()
+// Map allows to transform every item in an array to another item.
+const newHobbies = hobbies.map((item) => item + " is fun!");
+console.log(newHobbies);
+
+const editedHobbies = hobbies.map((item) => ({text: item}));
+console.log(editedHobbies);
 
