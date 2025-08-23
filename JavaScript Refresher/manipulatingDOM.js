@@ -11,5 +11,6 @@ list.remove(); // removes the ul element from the DOM.
 
 // My research notes on DOM:
 
+// DOM stands for Document Object Model.
 // basically a programming interface that lets you interact with and manipulate the structure of a web page.
 // tree-like representation of everything in an HTML (or XML) document.
