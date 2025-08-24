@@ -1,16 +1,28 @@
+import componentsImg from "./assets/components.png";
+import { CORE_CONCEPTS } from "./data.js";
+import Header from "./components/Header.jsx";
+import CoreConcept from "./components/CoreConcept.jsx";
+
 function App() {
   return (
     <div>
-      <header>
-        <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
-        <h1>React Essentials</h1>
-        <p>
-          Fundamental React concepts you will need for almost any app you are
-          going to build!
-        </p>
-      </header>
+      <Header />
       <main>
-        <h2>Time to get started!</h2>
+        <section id="core-concepts">
+          <h2>Core Concepts</h2>
+          <ul>
+            {/* here title, description and image are PROPS */}
+            <CoreConcept 
+              title="Component" 
+              description="Core UI building block." 
+              image={componentsImg} />
+            <CoreConcept 
+              title={CORE_CONCEPTS[1].title} 
+              description={CORE_CONCEPTS[1].description} 
+              image={CORE_CONCEPTS[1].image} />
+            <CoreConcept { ...CORE_CONCEPTS[2] } />
+          </ul>
+        </section>
       </main>
     </div>
   );
