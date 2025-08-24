@@ -5,3 +5,5 @@ Other features and concepts required are:
 - JSX
 - Props
 - State
+
+> HTML + CSS + JavaScript = React Component.
