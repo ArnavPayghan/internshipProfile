@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import componentsImg from "./assets/components.png";
 import { CORE_CONCEPTS, EXAMPLES } from "./data.js";
 import Header from "./components/Header.jsx";
@@ -30,7 +30,7 @@ function App() {
   };
 
   return (
-    <div>
+    <Fragment>
       <Header />
       <main>
         <section id="core-concepts">
@@ -53,7 +53,8 @@ function App() {
           { tabContent }
         </section>
       </main>
-    </div>
+      {/* Fragment can also be used as: <> </>, yep that's it. */}
+    </Fragment>
   );
 }
 
