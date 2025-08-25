@@ -7,3 +7,5 @@ Other features and concepts required are:
 - State
 
 > HTML + CSS + JavaScript = React Component.
+
+> Read more about ~
