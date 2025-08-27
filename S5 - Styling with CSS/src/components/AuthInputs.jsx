@@ -1,5 +1,19 @@
 import { useState } from 'react';
 
+import { styled } from 'styled-components';
+
+import Button from './Button.jsx';
+import Label from './Label.jsx';
+import Input from './Input.jsx';
+import CustomInput from './inputLabel.jsx';
+
+const ControlContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+`
+
 export default function AuthInputs() {
   const [enteredEmail, setEnteredEmail] = useState('');
   const [enteredPassword, setEnteredPassword] = useState('');
@@ -22,10 +36,10 @@ export default function AuthInputs() {
 
   return (
     <div id="auth-inputs">
-      <div className="controls">
-        <p className='paragraph'>
-          <label className={`label ${ emailNotValid ? "invalid" : "" }`}>Email</label>
-          <input
+      <ControlContainer>
+          <CustomInput
+            label="Email"
+            $invalid={emailNotValid}
             type="email"
             // style={{
             //   backgroundColor: emailNotValid ? 'red' : 'white'
@@ -33,23 +47,20 @@ export default function AuthInputs() {
             className={emailNotValid ? 'invalid' : undefined}
             onChange={(event) => handleInputChange('email', event.target.value)}
           />
-        </p>
-        <p className='paragraph'>
-          <label className={`label ${ emailNotValid ? "invalid" : "" }`}>Password</label>
-          <input
+          <CustomInput
+            label="Password"
             type="password"
             className={passwordNotValid ? 'invalid' : undefined}
             onChange={(event) =>
               handleInputChange('password', event.target.value)
             }
           />
-        </p>
-      </div>
+      </ControlContainer>
       <div className="actions">
         <button type="button" className="text-button">
           Create a new account
         </button>
-        <button className='button' onClick={handleLogin}>Sign In</button>
+        <Button className='button' onClick={handleLogin}>Sign In</Button>
       </div>
     </div>
   );
