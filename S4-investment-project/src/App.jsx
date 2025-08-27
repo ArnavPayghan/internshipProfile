@@ -1,6 +1,10 @@
 function App() {
   return (
-    <h1>React Investment Calculator</h1>
+    <>
+      <div id="user=input" className="">
+        <label><input type="number" id="" /></label>
+      </div>
+    </>
   )
 }
 
