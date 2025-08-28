@@ -13,6 +13,8 @@ function App() {
         setRedButton(true);
         setGreenButton(false);
     }
+
+    {/* Computed State Cases -> Go through it again. react.dev --- STATES IMP! */}
     
     let headingColor = greenButton ? 'green' : redButton ? 'red' : 'white';
     
