@@ -22,7 +22,7 @@ function App() {
 
       return {
         ...prevState,
-        tasks: [newTask, ...prevState.projects],
+        tasks: [newTask, ...prevState.tasks],
         selectedProjectID: undefined,
       };
     });
@@ -118,3 +118,6 @@ function App() {
 }
 
 export default App;
+
+
+// selection of prev date. --- validation.
