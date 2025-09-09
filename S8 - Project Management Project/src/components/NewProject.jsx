@@ -61,7 +61,7 @@ export default function NewProject({ onAdd, onCancel }) {
             <div className="">
                 <Input type="text" ref={title} label="Title" />
                 <Input ref={description} label="Description" textarea />
-                <Input type="date" ref={dueDate} label="Due Date" />
+                <Input type="date" ref={dueDate} label="Due Date" min={new Date().toISOString().split("T")[0]} />
             </div>
         </div>
         </>
